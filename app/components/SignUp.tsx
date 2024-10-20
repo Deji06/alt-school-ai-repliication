@@ -38,7 +38,7 @@ const SignUp = () => {
 
   return (
     <div className="px-4 py-4 sm:px-0 sm:py-0 bg-white rounded-[10px] sm:border">
-      <div className="mx-10">
+      <div className="sm:mx-10 w-[100%] sm:w-[80%]">
         <p className="capitalize font-bold text-[25px] mt-10 ">sign up</p>
         <a
           className="border flex gap-x-3 items-center py-3 justify-center capitalize mt-3 rounded-[10px] text-[#8392A7]"
