@@ -160,7 +160,7 @@ const Main = () => {
               <form className="border-2 flex flex-col gap-y-3 mx-2">
                 <div className="flex flex-col gap-y-2">
                   <label htmlFor="">Job Title</label>
-                  <input type="text" placeholder="enter job title" />
+                  <input type="text" placeholder="enter job title" className="border text-[18px]" />
                 </div>
                 <div>
                   <label htmlFor="">Job Description</label>
