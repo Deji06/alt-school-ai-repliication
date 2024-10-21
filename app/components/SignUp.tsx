@@ -7,7 +7,7 @@ import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import auth from "@/app/firebase/config";
 import { useRouter } from "next/navigation";
 
-type Props = {};
+// type Props = {};
 
 const SignUp = () => {
   // states
@@ -16,7 +16,7 @@ const SignUp = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const [createUserWithEmailAndPassword, user, loading, error] =
+  const [createUserWithEmailAndPassword ,loading, error] =
     useCreateUserWithEmailAndPassword(auth);
 
   const handleSignUp = async () => {
@@ -99,7 +99,7 @@ const SignUp = () => {
           type="submit"
           className="text-white bg-[#3056EC] px-5 py-2 rounded-[10px] mt-5"
           onClick={handleSignUp}
-          disabled={loading}
+          // disabled={loading}
         >
           {loading ? "Signing up..." : "Sign Up"}
         </button>

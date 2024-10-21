@@ -1,6 +1,6 @@
 "use client";
 // import Modal from "../components/Modal";
-import { useState} from "react";
+import { useState } from "react";
 import { FaUserGroup } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
 import { CiChat1 } from "react-icons/ci";
@@ -9,7 +9,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 
 // type Props = {};
 
-const main = () => {
+const Main = () => {
   const [currentPage, setCurrentPage] = useState<
     "screen1" | "screen2" | "screen3" | "screen4"
   >("screen1");
@@ -164,14 +164,16 @@ const main = () => {
                 </div>
                 <div>
                   <label htmlFor="">Job Description</label>
-                  <textarea name="" id="" placeholder="enter job description" ></textarea>
+                  <textarea
+                    name=""
+                    id=""
+                    placeholder="enter job description"
+                  ></textarea>
                 </div>
                 <div>
                   <label htmlFor="">Interview Date</label>
                   <input type="date" />
                 </div>
-
-
               </form>
             </div>
           )}
@@ -187,4 +189,4 @@ const main = () => {
   );
 };
 
-export default main;
+export default Main;
