@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import Signup from "../components/SignUp";
+// import Signup from "../components/SignUp";
 import Login from '@/app/components/LogIn'
 // import {useState} from 'react'
 // import { FcGoogle } from "react-icons/fc";
@@ -9,7 +9,7 @@ import Login from '@/app/components/LogIn'
 // import auth from '@/app/firebase/config'
 // import {useRouter} from 'next/navigation'
 
-type Props = {};
+// type Props = {};
 
 const LogIn = () => {
   return (

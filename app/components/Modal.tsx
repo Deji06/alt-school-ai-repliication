@@ -4,9 +4,9 @@ import { FaLinkedin } from "react-icons/fa";
 import { CiChat1 } from "react-icons/ci";
 import { BsFileEarmarkText } from "react-icons/bs";
 
-type Props = {};
 
-const Modal = (props: Props) => {
+
+const Modal = () => {
   return (
     <div className="border mt-20 rounded-[10px] pb-3 sm:w-[400px] sm:mx-20 bg-white">
       <p className="mx-4 font-black py-4">some of our services you'll need</p>

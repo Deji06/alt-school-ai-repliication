@@ -4,11 +4,7 @@ import Link from "next/link";
 import SignUp from "./components/SignUp";
 import Modal from '@/app/components/Modal'
 
-type Props = {};
-
-
-
-const page = (props: Props) => {
+const page = () => {
   return (
     <>
       <div className="px-4 py-4 sm:px-0 sm:py-0">

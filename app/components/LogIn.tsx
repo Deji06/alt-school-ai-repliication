@@ -7,8 +7,6 @@ import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import auth from "@/app/firebase/config";
 import { useRouter } from "next/navigation";
 
-type Props = {};
-
 const LogIn = () => {
   // states
   // const [name, setName] = useState('')
