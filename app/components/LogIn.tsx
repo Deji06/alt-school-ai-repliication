@@ -14,7 +14,7 @@ const LogIn = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const [signInWithEmailAndPassword, user, loading, error] =
+  const [signInWithEmailAndPassword,loading, error] =
     useSignInWithEmailAndPassword(auth);
 
   const handleLogIn = async () => {
@@ -96,7 +96,7 @@ const LogIn = () => {
           type="submit"
           className="text-white bg-[#3056EC] px-5 py-2 rounded-[10px] mt-5"
           onClick={handleLogIn}
-          disabled={loading}
+          // disabled={loading}
         >
           {loading ? "Logging in..." : "Log In"}
         </button>

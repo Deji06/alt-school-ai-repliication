@@ -8,7 +8,7 @@ import Signup from "../components/SignUp";
 // import auth from '@/app/firebase/config'
 // import {useRouter} from 'next/navigation'
 
-type Props = {};
+// type Props = {};
 
 const SignUp = () => {
   return (

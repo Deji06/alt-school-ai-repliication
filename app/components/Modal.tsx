@@ -9,7 +9,7 @@ import { BsFileEarmarkText } from "react-icons/bs";
 const Modal = () => {
   return (
     <div className="border mt-20 rounded-[10px] pb-3 sm:w-[400px] sm:mx-20 bg-white">
-      <p className="mx-4 font-black py-4">some of our services you'll need</p>
+      <p className="mx-4 font-black py-4">some of our services you&apos;ll need</p>
       <div className="border "></div>
       <div className="flex flex-col px-5 gap-y-5 mt-2 py-3">
         <div className="flex items-center gap-x-5">

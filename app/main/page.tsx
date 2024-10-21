@@ -78,9 +78,7 @@ const Main = () => {
                   <div className="flex items-center gap-x-5">
                     <FaLinkedin />
                     <p
-                      onClick={(handleScreenChange) => {
-                        currentPage === "screen2";
-                      }}
+                      onClick={() => {}}
                       className=" capitalize"
                     >
                       linkedIn profile review
