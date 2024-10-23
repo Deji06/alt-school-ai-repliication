@@ -24,13 +24,12 @@ const Main = () => {
     screen: "screen1" | "screen2" | "screen3" | "screen4"
   ): void => {
     setCurrentPage(screen);
-    setOpenMenu(!openMenu)
+    setOpenMenu(!openMenu);
   };
 
   // useEffect(() => {
   //   console.log('openMenu state changed:', openMenu);
   // }, [openMenu]);
-
 
   return (
     <>
@@ -59,14 +58,21 @@ const Main = () => {
                 <div className="flex flex-col px-5 gap-y-5 mt-2 py-3">
                   <div className="flex items-center gap-x-5">
                     <FaUserGroup />
-                    <p onClick={() => {handleScreenChange('screen1')}} className=" capitalize">
+                    <p
+                      onClick={() => {
+                        handleScreenChange("screen1");
+                      }}
+                      className=" capitalize"
+                    >
                       interview prep
                     </p>
                   </div>
                   <div className="flex items-center gap-x-5">
                     <FaLinkedin />
                     <p
-                      onClick={() => {handleScreenChange('screen2')}}
+                      onClick={() => {
+                        handleScreenChange("screen2");
+                      }}
                       className=" capitalize"
                     >
                       linkedIn profile review
@@ -146,9 +152,13 @@ const Main = () => {
               <form className="flex flex-col gap-y-3 mx-5 ">
                 <div className="flex flex-col gap-y-2">
                   <label htmlFor="">Job Title</label>
-                  <input type="text" placeholder="Enter Job Title" className="border text-[18px] py-2 px-3 rounded-[10px]" />
+                  <input
+                    type="text"
+                    placeholder="Enter Job Title"
+                    className="border text-[18px] py-2 px-3 rounded-[10px]"
+                  />
                 </div>
-                <div className="flex flex-col gap-y-2" >
+                <div className="flex flex-col gap-y-2">
                   <label htmlFor="">Job Description</label>
                   <textarea
                     name=""
@@ -159,7 +169,30 @@ const Main = () => {
                 </div>
                 <div className="flex flex-col gap-y-2">
                   <label htmlFor="">Interview Date</label>
-                  <input type="date" className="border py-2 px-3 rounded-[10px] w-[100%]" />
+                  <input
+                    type="date"
+                    className="border py-2 px-3 rounded-[10px] w-[100%]"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-700">
+                    Upload your document
+                  </label>
+                  <input
+                    type="file"
+                    // onChange={handleFileChange}
+                    className="mt-1 block w-full text-sm text-gray-500
+                    file:mr-4 file:py-2 file:px-4
+                    file:border-0 file:text-sm file:font-semibold
+                    file:bg-blue-50 file:text-blue-700
+                    hover:file:bg-blue-100"
+                  />
+                  <button
+                    type="submit"
+                    className="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                  >
+                    Submit
+                  </button>
                 </div>
               </form>
             </div>
