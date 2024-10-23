@@ -24,26 +24,14 @@ const Main = () => {
     screen: "screen1" | "screen2" | "screen3" | "screen4"
   ): void => {
     setCurrentPage(screen);
+    setOpenMenu(!openMenu)
   };
 
   // useEffect(() => {
   //   console.log('openMenu state changed:', openMenu);
   // }, [openMenu]);
 
-  // const handleScreenChange = (
-  //   screen: "screen1" | "screen2" | "screen3" | "screen4"
-  // ): void => {
-  //   setCurrentPage(screen); // Update the state to the selected screen
-  //   if (screen === "screen1") {
-  //     setOpenDashboard(true); // Open the dashboard when screen2 is selected
-  //   } else if (screen === "screen2") {
-  //     setOpenDashboard(false); // Open the dashboard when screen2 is selected
-  //   } else {
-  //     setOpenDashboard(false); // Close the dashboard for other screens
-  //   }
-  // };
 
-  // const[pages, setPages] =  useState(false)
   return (
     <>
       <div className="px-4 py-4 sm:px-0 sm:py-0 ">
@@ -59,7 +47,7 @@ const Main = () => {
           <button className="hidden sm:flex">log out</button>
         </div>
         {/* contsainer div */}
-        <div className="flex sm:flex-row flex-col items-center gap-x-2 relative sm:absolute">
+        <div className="flex sm:flex-row flex-col items-center gap-x-2 relative sm:absolute pb-10">
           {/* left side mobile modal */}
           {openMenu && (
             <div className="sm:w-[40%] w-[100%] sm:hidden absolute top-[-80px] sm:top-0">
@@ -71,14 +59,14 @@ const Main = () => {
                 <div className="flex flex-col px-5 gap-y-5 mt-2 py-3">
                   <div className="flex items-center gap-x-5">
                     <FaUserGroup />
-                    <p onClick={() => {}} className=" capitalize">
+                    <p onClick={() => {handleScreenChange('screen1')}} className=" capitalize">
                       interview prep
                     </p>
                   </div>
                   <div className="flex items-center gap-x-5">
                     <FaLinkedin />
                     <p
-                      onClick={() => {}}
+                      onClick={() => {handleScreenChange('screen2')}}
                       className=" capitalize"
                     >
                       linkedIn profile review
@@ -148,29 +136,30 @@ const Main = () => {
           {/* right side */}
           {/* screen 1 */}
           {currentPage === "screen1" && (
-            <div className="border-dashed border-2 rounded-[10px] px-2 space-y-10 py-5 w-[60%] mt-10">
+            <div className="border-dashed border-2 rounded-[10px] px-2 space-y-10 py-5 sm:w-[60%] w-[100%] mt-10">
               <p className="">interview prep</p>
               <p className="px-5">
                 Interview Prep helps you get comprehensive access to possible
                 questions and their answers in preparation for your next job
                 interview.
               </p>
-              <form className="border-2 flex flex-col gap-y-3 mx-2">
+              <form className="flex flex-col gap-y-3 mx-5 ">
                 <div className="flex flex-col gap-y-2">
                   <label htmlFor="">Job Title</label>
-                  <input type="text" placeholder="enter job title" className="border text-[18px]" />
+                  <input type="text" placeholder="Enter Job Title" className="border text-[18px] py-2 px-3 rounded-[10px]" />
                 </div>
-                <div>
+                <div className="flex flex-col gap-y-2" >
                   <label htmlFor="">Job Description</label>
                   <textarea
                     name=""
                     id=""
-                    placeholder="enter job description"
+                    placeholder="Enter Job Description"
+                    className="border text-[18px] py-2 px-3 rounded-[10px]"
                   ></textarea>
                 </div>
-                <div>
+                <div className="flex flex-col gap-y-2">
                   <label htmlFor="">Interview Date</label>
-                  <input type="date" />
+                  <input type="date" className="border py-2 px-3 rounded-[10px] w-[100%]" />
                 </div>
               </form>
             </div>
